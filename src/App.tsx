@@ -5,41 +5,31 @@ import { Sub } from "./types";
 // * Components
 import List from "./components/List";
 import Form from "./components/Form";
+import SubsService from './services/subs.service';
 
 interface AppState {
   subs: Sub[]
 }
 
-const INITAL_STATE = [
-  {
-    nick: 'daepelu',
-    subMonths: 3,
-    avatar: 'https://i.pravatar.cc/150?u=dapelu',
-    description: 'He is a moderator sometimes'
-  },
-  {
-    nick: 'sergio_serrano',
-    subMonths: 7,
-    avatar: 'https://i.pravatar.cc/150?u=sergio_serrano'
-  }
-];
-
 function App() {
 
   const [subs, setSubs] = useState<AppState['subs']>([]);
+  const [newSubsNumber, setNewSubsNumber] = useState(0);
   const divRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setSubs(INITAL_STATE);
+    SubsService().then(setSubs);
   }, []);
 
   const handleNewSub = (newSub:Sub):void => {
     setSubs(subs => [...subs, newSub]);
+    setNewSubsNumber(n => n + 1);
   }
 
   return (
     <div className="App" ref={divRef}>
       <List subs={subs} />
+      New Subs: { newSubsNumber }
       <Form onNewSub={handleNewSub} />
     </div>
   );

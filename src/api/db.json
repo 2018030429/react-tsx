@@ -1,0 +1,22 @@
+{
+  "subs": [
+    {
+      "nick": "Medigans",
+      "months": 3,
+      "description": "Medigans es mid-senior en Patreon",
+      "profileUrl": "https://cdn.discordapp.com/avatars/234715373201653760/4e792332394b69186a4eaf88143de9ea.png?size=512"
+    },
+    {
+      "nick": "tictools",
+      "months": 6,
+      "description": "TicTools era profe!",
+      "profileUrl": "https://cdn.discordapp.com/avatars/234715373201653760/4e792332394b69186a4eaf88143de9ea.png?size=512"
+    },
+    {
+      "months": 3,
+      "nick": "Reddo",
+      "description": "Redo es hacer dos veces",
+      "profileUrl": "https://cdn.discordapp.com/avatars/234715373201653760/4e792332394b69186a4eaf88143de9ea.png?size=512"
+    }
+  ]
+}
